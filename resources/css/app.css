@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-white;
+    font-family: "Roboto Slab";
+}
+
+@layer components {
+    .border,
+    .border-r,
+    .border-l,
+    .border-t,
+    .border-b,
+    .border-x,
+    .border-y {
+        @apply border-gray-700;
+    }
+    *:focus-visible {
+        @apply outline-none ring ring-red-500/50;
+    }
+    .button {
+        @apply px-2.5 py-1.5 bg-red-600 hover:bg-red-600/75 transition-colors rounded;
+    }
+    input,
+    textarea {
+        @apply px-3 py-1.5 rounded border bg-gray-800;
+    }
+}
+
+.paginate {
+    @apply *:*:flex *:*:justify-between *:*:items-center py-5 *:*:w-full;
+
+    p {
+        @apply flex gap-1;
+    }
+
+    span {
+        @apply flex gap-2;
+
+        & > * {
+            @apply w-10 h-10 flex items-center justify-center rounded;
+        }
+    }
+}
